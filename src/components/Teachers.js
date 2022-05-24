@@ -1,4 +1,5 @@
 import { useState } from "react"
+import TeacherCard from "./TeacherCard"
 
 //use later on example
 const data = [
@@ -34,6 +35,12 @@ const Teachers = () => {
           </div>
         )
       })}
+      {/* SOLUTION WITH PROPS */}
+      {/* {!hide && teachers.map(teacher => <TeacherCard 
+        name={teacher.name} 
+        age={teacher.age} 
+        country={teacher.country}/>
+      )} */}
     </div>
   )
 }
