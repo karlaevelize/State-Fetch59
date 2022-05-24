@@ -13,7 +13,7 @@ const data = [
 const Teachers = () => {
 
   const [ teachers, setTeachers ] = useState(data)
-  const [ hide, setHide ] = useState(false)
+  const [ hide, setHide ] = useState(true)
 
   // console.log("teachers", teachers)
   console.log("hide", hide)
@@ -26,7 +26,7 @@ const Teachers = () => {
     <div>
       <h2>Teachers Component</h2>
       <button onClick={toggleTeachers}>{hide ? "Display teachers" : "Hide teachers"}</button>
-      {/* {hide === false && teachers.map(teacher => { */}
+      {/* {hide === false && teachers.map(teacher => {  */}
       {!hide && teachers.map(teacher => {
         return (
           <div>
