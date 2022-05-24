@@ -18,31 +18,31 @@ const Fetching = () => {
   //4. Check the response
   //5. Put it in local state
 
+  //this response is an array
   const getPokemons = async () => {
     const response = await axios.get("https://pokeapi.co/api/v2/pokemon")
     // console.log("response", response)
     setPokemons(response.data.results)
   }
 
+  //this response is an object
   const getOneCharacter = async () => {
     const response = await axios.get("https://hp-assessment-api.herokuapp.com/got/characters/1")
     console.log("response", response)
     setChar(response.data)
   }
 
-  console.log("pokemons", pokemons)
-
   //takes two arguments: function and empty array
   useEffect(() => { 
     getPokemons()
     getOneCharacter()
-  }, []) //no []: always runs, with []: runs once, with [ variable]: whenever the variable changes
+  }, []) //no []: always runs, with []: runs once, with [variable]: runs whenever the variable changes
 
 
   return (
     <div>
-      <h2>Fetching Data</h2>
-      {char.name}
+      <h2>Fetching Data</h2>  
+      {char.name}  {/* displaying an object */}
       <p>Current count: {count} <button onClick={() => setCount(count + 1)}>+ 1</button></p>
       {!pokemons ? "Loading" : pokemons.map(pokemon => <h3>{pokemon.name}</h3>) }
     </div>
