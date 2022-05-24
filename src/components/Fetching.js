@@ -3,7 +3,7 @@ import axios from "axios"
 
 //pokemon url: https://pokeapi.co/api/v2/pokemon
 //random cat gif: https://cataas.com/cat/gif
-//harry potter: http://hp-api.herokuapp.com/api/characters/1
+//game of thrones: http://hp-api.herokuapp.com/api/characters/1
 
 const Fetching = () => {
 
@@ -42,7 +42,7 @@ const Fetching = () => {
   return (
     <div>
       <h2>Fetching Data</h2>  
-      {char.name}  {/* displaying an object */}
+      {char.name}  {/* displaying an object, no need to map */}
       <p>Current count: {count} <button onClick={() => setCount(count + 1)}>+ 1</button></p>
       {!pokemons ? "Loading" : pokemons.map(pokemon => <h3>{pokemon.name}</h3>) }
     </div>
