@@ -12,3 +12,6 @@
 - When we have variables that the value is supposed to change
 
 ## useEffect Hook
+
+- Fetch data
+- Control the amount of re-renders on the page
